@@ -11,5 +11,5 @@ func HandleResquests() {
   http.HandleFunc("/func1", functions.Func1)
 	http.HandleFunc("/func2", functions.Func2)
   
-	log.Fatal(http.ListenAndServe(":8000", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
