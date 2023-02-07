@@ -29,3 +29,16 @@ docker-compose -f docker-compose-netdata.yml up
 ```
 
 4. O Prometheus estará acessível em http://localhost:9090 e o NetData em http://localhost:19999 ou na própria página web do NetData.
+
+5. Para realizar o experimento com simulação de carga, execute o script de simulação:
+
+```bash
+go run script_simulacao_carga.go
+```
+
+O script aceita dois parâmetros passados como flags:
+
+- -n: Número de requisições a serem feitas para cada endpoint (padrão número randômico)
+- -s: Número em segundos de espera entre as requisições (padrão 15 segundos)
+
+E com isso deverá ser possível observar os dados sendo coletados e expostos pelo Prometheus e/ou pelo NetData.
